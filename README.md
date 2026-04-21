@@ -1,0 +1,3 @@
+## Application description
+This is a console application written in Javascript. It is a simple Rock Paper Scissors game.
+The logic is based on generating a random number from 1 to 3 and printing "Rock", "Paper" or "Scissors" depending on the random number. Before that is outputted into the console, the user will be prompted to enter their choice. These results will be compared to see if the user or simple bot won.
