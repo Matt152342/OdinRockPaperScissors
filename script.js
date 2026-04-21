@@ -22,7 +22,7 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
 
-    if (humanChoice == computerChoice) {
+    if (humanChoice.toLowerCase() == computerChoice.toLowerCase()) {
         console.log(`Tie!`);
     }
     else {
@@ -54,5 +54,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    
+    for (let i = 0; i < 5; i++) {
+        let computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice();
+
+        playRound(humanChoice, computerChoice);
+    }
+
+    if (humanScore > computerScore) {
+        console.log("You are the winner!");
+    }
+    else {
+        console.log("You are the loser!");
+    }
 }
+
+playGame();
