@@ -1,3 +1,6 @@
+let computerScore = 0;
+let humanScore = 0;
+
 function getComputerChoice() {
     let randNum = Math.random() * 3;
 
@@ -12,4 +15,7 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice = prompt("Enter 'Rock', 'Paper' or 'Scissors': ");
+    return humanChoice.toLowerCase();
+}
