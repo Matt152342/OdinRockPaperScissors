@@ -19,3 +19,40 @@ function getHumanChoice() {
     let humanChoice = prompt("Enter 'Rock', 'Paper' or 'Scissors': ");
     return humanChoice.toLowerCase();
 }
+
+function playRound(humanChoice, computerChoice) {
+
+    if (humanChoice == computerChoice) {
+        console.log(`Tie!`);
+    }
+    else {
+        if (humanChoice.toLowerCase() == "rock" && computerChoice == "Paper") {
+            console.log(`You Lose! ${humanChoice} does not beat ${computerChoice}.`);
+            computerScore++;
+        }
+        else if (humanChoice.toLowerCase() == "rock" && computerChoice == "Scissors") {
+            console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+            humanScore++;
+        }
+        else if (humanChoice.toLowerCase() == "paper" && computerChoice == "Rock") {
+            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+        }
+        else if (humanChoice.toLowerCase() == "paper" && computerChoice == "Scissors") {
+            console.log(`You Lose! ${humanChoice} does not beat ${computerChoice}.`);
+            computerScore++;
+        }
+        else if (humanChoice.toLowerCase() == "scissors" && computerChoice == "Rock") {
+            console.log(`You Lose! ${humanChoice} does not beat ${computerChoice}.`);
+            computerScore++;
+        }
+        else if (humanChoice.toLowerCase() == "scissors" && computerChoice == "Paper") {
+            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+        }
+    }
+}
+
+function playGame() {
+    
+}
